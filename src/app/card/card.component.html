@@ -1,0 +1,42 @@
+
+  <div class="container container-default"  >
+<h1>Card App</h1>
+<div class="panel panel-info" *ngFor="let card of cards">
+ <div class="panel-heading" ><span class="panel-title"><a [routerLink]="['/cards', card.id]" class="module">{{card.fname + card.lname}}</a></span>
+
+
+
+<div><button type="button" id="option-meh" class="btn btn-warning" (click)="handle()" [routerLink]="['/edit', card.id]" routerLinkActive="Active">EDIT</button>
+  </div>
+        <td [ngStyle]="{'color':card.voteCount <=25? 'red':(card.voteCount>25 && card.voteCount <=50) ?'orange' :'green'}"> {{card.voteCount}}</td>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th>Id</th>
+        <th>FName</th>
+        <th>LName</th>
+        <th>Email</th>
+        <th>Ph No.</th>
+        <th> Rating</th>
+        <th>Vote</th>
+      </tr>
+      <tr>
+        <td>{{card.id}}</td>
+        <td>{{card.fname}}</td>
+        <td>{{card.lname}}</td>
+        <td>{{card.email}}</td>
+        <td>{{card.phone}}</td>
+        <!-- <td [ngClass]="{'active0':voteCount < 25,'active1':card.voteCount>25&&card.voteCount<50,'active2':card.voteCount> }"> {{card.voteCount}}</td> -->
+        <td class=active0 *ngIf="card.voteCount<25"> Low</td>
+        <td class=active1 *ngIf="card.voteCount>=25 && card.voteCount<50 ">Medium </td>
+        <td class=active2 *ngIf="card.voteCount>50"> High </td>
+       <td>
+          <app-vote [voteCount1]="card.voteCount" (contentChanged)="card.voteCount=$event"></app-vote>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet>

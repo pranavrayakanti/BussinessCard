@@ -1,0 +1,111 @@
+.navbar-default {
+    background-color: #7b431a;
+    border-color: #d65c14;
+}
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #8a0e0b;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #8a0e0b;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #8a0e0b;
+    background-color: #d65c14;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #8a0e0b;
+    background-color: #d65c14;
+}
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #8a0e0b;
+    border-bottom-color: #8a0e0b;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #8a0e0b;
+    border-bottom-color: #8a0e0b;
+}
+.navbar-default .navbar-toggle {
+    border-color: #d65c14;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #d65c14;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+
+body {
+    font-family: helvetica;
+    background: #eee;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  form {
+    margin-top: 2em;
+  }
+  
+  .hide {
+    position: absolute;
+    left: -10000px;
+  }
+  
+  label {
+    display: inline-block;
+    background: gray;
+    margin: 25px;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 2px;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  }
+  
+ 
+     .option-happy 
+     {
+      cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+    }
+    :checked ~ .option-happy {
+    background: green;
+    }
+
+
+
+   
+         
+    
+  
+  
+
+  
+  

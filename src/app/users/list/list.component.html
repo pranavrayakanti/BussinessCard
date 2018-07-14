@@ -1,0 +1,31 @@
+<div class="container container-default"  > 
+
+<h4 class="users">Users:</h4>
+  <div class="panel panel-success"*ngFor="let user of users">
+    <div class="panel-heading" >User ID :{{user.fname + user.lname}}</div>
+    <div class="panel-body">
+      <div>
+     FName  : {{user.fname}}<br>
+     LName  : {{user.lname}}<br>
+     Password  : {{user.pwd}}<br>
+
+     Address: {{user.address.city}}<br>
+     State: {{user.address.state}}<br>
+     Zip: {{user.address.zip}}<br>
+
+     Gender : {{user.gender}}<br>
+       </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>

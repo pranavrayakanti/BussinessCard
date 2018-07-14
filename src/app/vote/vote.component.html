@@ -1,0 +1,10 @@
+<button type="button" (click)="handleclick($event)" (click)="handleChange()" onClick="this.disabled = true;" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-thumbs-up"></span>
+</button>
+<div [ngStyle]="{'color':voteCount1 <=25? 'red':(voteCount1>25 && voteCount1 <=50) ?'orange' :'green'}">{{voteCount1}}
+  <br/>
+</div>
+<button type="button" (click)="handleclick1($event)" (click)="handleChange()" onClick="this.disabled = true;" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-thumbs-down"></span>
+</button>
+<br>

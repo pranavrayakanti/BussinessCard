@@ -1,0 +1,200 @@
+<div style="max-width:400px;margin-left:auto;margin-right:auto;">     
+  <div class="form-group">
+    <form (ngSubmit)="adduser(sForm)" [formGroup]="sForm">
+      <div class="panel panel-warning">
+        <div class="panel-heading">UName:</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="fname">FirstName:</label>
+            <input type="text" class="form-control" formControlName="fname" placeholder="First Name">
+
+            <div *ngIf="fname.pending">checking.....
+              <i class="fas fa-spinner"></i>
+
+
+
+            </div>
+            <div class="alert alert-danger" *ngIf="sForm.controls.fname.touched && sForm.controls.fname.errors?.minlength">
+                "minlength {{fname.errors?.minlength.requiredLength}}"
+            </div>
+
+            <div class="alert alert-danger" 
+            *ngIf="sForm.controls.fname.touched && sForm.controls.fname.errors?.required">
+            Name is a required field
+        </div>
+
+        <div class="alert alert-danger" 
+        *ngIf="fname.touched && fname.errors?.invalidName">
+              Name already exists
+    
+      </div>         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          </div>
+          <div class="form-group">
+            <label for="lname">LastName:</label>
+            <input type="text" class="form-control" formControlName="lname" placeholder="Last Name">
+          </div>
+
+
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="string" class="form-control" formControlName="pwd" placeholder="Password">
+            
+            
+            <div class="alert alert-danger" 
+            *ngIf="pwd.touched && pwd.errors?.invalidpwdv"> Pattern Not Matched 
+        
+          </div>     
+
+
+
+
+          </div>
+
+
+          <div class="form-group">
+              <label for="confirmpwd">Confirm Password:</label>
+              <input type="password" class="form-control" formControlName="confirmpwd" placeholder="Confirm Password">
+
+              <div class="alert alert-danger" 
+        *ngIf="confirmpwd.touched && confirmpwd.errors?.invalidpwd"> password not matched
+    
+      </div>     
+      
+      
+
+
+
+            </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" formControlName="age" placeholder="Age">
+          </div>
+          <div class="radio">
+            <label for="gender">Gender:</label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" formControlName="gender" value="M"> Male </label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" formControlName="gender" value="F">Female</label>
+          </div>
+          <div formGroupName="address">
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input type="text" class="form-control" formControlName="city" placeholder="City">
+            </div>
+            <div class="form-group">
+              <label for="state">State:</label>
+              <input type="text" class="form-control" formControlName="state" placeholder="Sate">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip:</label>
+              <input type="text" class="form-control" formControlName="zip" placeholder="Zip">
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="sForm.invalid">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+
+</div>
+
+
+
+
+  
+<!-- <h2>Hero Detail</h2>
+<h3><i>FormControl in a FormGroup</i></h3>
+<form [formGroup]="heroForm">
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+</form>
+
+<div class="radio">
+        <label><input type="radio" name="optradio">Option 1</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio">Option 2</label>
+      </div>
+ -->
+
+
+
+
+<!-- <div class="container">
+ <h3>Add-User's</h3>
+    <div class="input-group">
+     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+     <input id="ufname" type="text" class="form-control" name="fname" placeholder="F.Name">
+   </div>
+   <div class="input-group">
+     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+     <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+   </div>
+   <div class="input-group">
+        <span class="input-group-addon"><i class=      "fa fa-address-book-o"        ></i></span>
+        <input id="Address" type="string" class="form-control" name="Address" placeholder="Enter Address">
+      </div>
+   <br>
+   <div class="input-group">
+     <span class="input-group-addon">Text</span>
+     <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+   </div> -->
+
+<!-- <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10"> 
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      </div>
+    </div>
+    <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form> -->
+
+
+
+
+<!-- sForm:FormGroup -->
+
+<!-- <form  [formGroup]="sForm" (ngSubmit)="adduser()">
+
+  First name:<br>
+  <input type="text" formControlName="firstname"><br>
+  Last name:<br>
+  <input type="text" formControlName="lastname">
+<br>
+  <button type="submit"   >Submit</button>
+
+
+</form> -->

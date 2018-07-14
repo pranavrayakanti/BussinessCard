@@ -1,0 +1,55 @@
+h1{
+
+
+    color:red;
+}
+p{
+color:rebeccapurple;
+
+}
+
+
+.panel-heading.row {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  } 
+
+  .panel-heading{
+    display:flex; 
+    justify-content: space-between;
+
+
+
+
+  }
+  .module {
+    cursor: pointer;	
+  }
+  
+  
+  
+
+
+
+
+
+  .active0
+  {
+
+color:red;
+
+
+  }
+
+  .active1{
+
+    color:orange;
+  }
+
+  .active2{
+
+color:green;
+
+
+  }

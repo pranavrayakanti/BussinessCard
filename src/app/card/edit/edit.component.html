@@ -1,0 +1,71 @@
+<p>
+  edit works!
+</p>
+<p>
+    card-form-component works!
+</p>
+<div class="container container-default">
+    
+    <form (ngSubmit)="handleSubmit(cForm)" #cForm="ngForm">
+        <div class="form-group">
+            <label for="fname">FName:</label>
+            <input type="text" class="form-control" [(ngModel)]="card.fname" name="fname" required minlength="8" #cfname="ngModel">{{cfname.errors | json}}
+            <div *ngIf="cfname.touched&&cfname.errors?.required " class="alert alert-danger">
+                Plz Enter Fname
+            </div>
+            <div *ngIf="cfname.touched&&cfname.errors?.minlength " class="alert alert-danger">
+                Plz Enter Min 8 Char of length
+            </div>
+        </div>
+        <div class="form-group">
+
+
+            <label for="LName">LName</label>
+            <input type="text" class="form-control" [(ngModel)]="card.lname" name="lname" required>
+        </div>
+        <div class="form-group">
+
+            
+            <label for="EMail">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="card.email" name="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                #cemail="ngModel">
+
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+
+                <div [hidden]="!email.hasError('pattern')"> email format should be like :
+                    <h6>email@abc.com</h6>
+                </div>
+            </div>
+        </div>
+        <!-- 
+             <div *ngIf="(cemail.touched || cemail.dirty) && cemail.errors">
+                <span *ngIf="cemail.errors.pattern">
+                    Please enter a valid email address.
+                </span>
+                <span *ngIf="cemail.errors.cemail">
+                    Please enter a valid email address.
+                </span>
+            </div> -->
+        <div class="form-group">
+            <label for="phone">Phone No</label>
+            <input type="number" class="form-control" [(ngModel)]="card.phone" name="phone" required minlength="10" #cphone="ngModel">{{cphone.errors | json}}
+            <div *ngIf="cphone.touched&&cphone.errors?.required " class="alert alert-danger">
+                Plz Enter Phone Number {{cphone.errors | json}}
+            </div>
+            <div *ngIf="cphone.touched&&cphone.errors?.minlength " class="alert alert-danger">
+                Plz Enter valid Phone Number Length
+            </div>
+        </div>
+        <!-- <div class="form-group">
+            <label for="phone">Phone No</label>
+            <input type="number" class="form-control" [(ngModel)]="card.phone" name="phone" pattern="[0-9]*" required minlength="10"
+                maxlength="10" #cphone="ngModel">
+            <div [hidden]="cphone.valid || cphone.pristine" class="alert alert-danger">
+                <div [hidden]="!cphone.hasError('minlength')">Mobile should be minimum 10digit</div>
+                <div [hidden]="cphone.touched&&!ccphone.hasError('required')">Mobile is required</div>
+                <div [hidden]="!cphone.hasError('pattern')">Mobile number should be only numbers</div>
+            </div>
+        </div> -->
+        <button type="submit" [disabled]="!cForm.invalid" class="btn btn-default" name="submit">Submit</button>
+    </form>
+</div>

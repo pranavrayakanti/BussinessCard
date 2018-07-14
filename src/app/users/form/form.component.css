@@ -1,0 +1,14 @@
+.Absolute-Center.is-Responsive {
+    width: 500%; 
+    height: 50%;
+    min-width: 200px;
+    max-width: 900px;
+    padding: 40px;
+  }
+
+  .Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+  

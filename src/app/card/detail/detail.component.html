@@ -1,0 +1,48 @@
+<div class="container container-default"  >
+    <div class="panel panel-info" >
+            <div class="panel-heading" ><span class="panel-title">{{card.fname + card.lname}}</span>
+                           </div>
+        
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Created Date </th>
+
+            <th>FullName</th>
+            <th>Created by</th>
+            <th>Update BY</th>
+            <th>updated date</th>
+            <th>Rating</th>
+    
+          <tr>
+            <td>{{card.id}}</td>
+            <td>  {{carddate | date}}</td>
+
+
+
+            <td>{{card.fname + "    "+card.lname}}</td>
+
+
+             <td >{{cardcreatedby}} </td>
+              <td>{{cardmodifyby}}</td>
+              <td>{{cardupdate}}</td>
+    
+    
+            <td class=active0 *ngIf="card.voteCount<25"> Low</td>
+    
+            <td class=active1 *ngIf="card.voteCount>=25 && card.voteCount<50 ">Medium </td>
+    
+            <td class=active2 *ngIf="card.voteCount>50"> High </td>
+    
+            
+    
+    
+          </tr>
+        </table> 
+    
+      </div>
+    </div>
+
+
+    
+    

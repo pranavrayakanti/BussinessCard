@@ -1,0 +1,14 @@
+.panel-heading.row {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  } 
+
+  .panel-heading{
+    display:flex; 
+    justify-content: space-between;
+
+
+
+
+  }
